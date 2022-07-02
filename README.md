@@ -1,27 +1,25 @@
 # DEMOC_code
-Requirement:
+## Requirement:
 
 Python --- 3.7.4
 Keras --- 2.3.1
 Tensorflow --- 1.15.0
 
-Usage:
+## Usage:
 
-# Input CITE-seq dataset
+### Input CITE-seq dataset
    View1: RNA data, a M*N matrix with M genes and N cells
    View2: Protein data, a D*N matrix with D proteins and N cells
    View3: Imputed RNA data, a M*N matrix with M proteins and N cells
 
-# Input scRNA-seq dataset
+### Input scRNA-seq dataset
    View1: RNA data, a M*N matrix with M genes and N cells
    View2: Imputed RNA data, a M*N matrix with M proteins and N cells
 
-# settings in main.py
-  TEST = Ture 
-  # when TEST = Ture, the code just test the trained DEMOC model
-  train_ae = False 
-  # when train_ae = Ture, the code will pre-train the autoencoders first, and the fine-turn the model with DEMOC
+### settings in main.py
+  (default) testing = True, when testing = True, the code just test the trained DEMOC model
+  (default) train_ae = False, when train_ae = Ture, the code will pre-train the autoencoders first, and the fine-turn the model with DEMOC
 
-# run the code：
+### run the code：
   Input CITE-seq dataset: python main.py --Multi_view=3
   Input scRNA-seq dataset: python main.py --Multi_view=2
