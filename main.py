@@ -93,7 +93,7 @@ def train(args, view=2):
                   (Nmetrics.acc(y, y_pred2), Nmetrics.ami(y, y_pred2, "max"), Nmetrics.ari(y, y_pred2)))
             print('Final: acc=%.4f, ami=%.4f, ari=%.4f' %
                   (Nmetrics.acc(y, y_pred), Nmetrics.ami(y, y_pred, "max"), Nmetrics.ari(y, y_pred)))
-        pd.DataFrame(y_pred).to_csv("../../datasets_select/" + args.dataset + "_pred.csv")
+
     if view == 3:
         y_pred1, y_pred2, y_pred3, y_pred = model.fit3(optimizer=optimizer, arg=args, x1=x_counts, x2=sf, x3=raw_counts,
                                                        x1p=protein_count, x2p=impute_count, y=y, maxiter=args.maxiter,
